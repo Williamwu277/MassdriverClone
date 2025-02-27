@@ -2,17 +2,16 @@
 import { useState } from "react";
 import Image from "next/image"
 
-export default function VideoPopup(){
+export default function VideoPopup({ img, url } : { img: string, url: string }){
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <>
-
         {/* Thumbnail (Click to Open Modal) */}
         <div className="flex relative justify-center w-full">
             <Image
-                src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/656ff2a2c5caa0c1115f8a97_observe.png"
+                src={img}
                 alt="Video Thumbnail"
                 height={1000}
                 width={1000}
@@ -21,7 +20,7 @@ export default function VideoPopup(){
             />
             {/* Play button overlay */}
             <img onClick={() => setIsOpen(true)} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:opacity-75" src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64acf11aea05539a1f8e2e4a_YouTube_play_button.svg"/>
-        </div>
+        </div>    
 
         {/* Video Modal */}
         {isOpen && (
@@ -32,7 +31,7 @@ export default function VideoPopup(){
                 <div className="flex justify-center items-center w-full max-w-[940px] aspect-video">
                     <iframe 
                         className="w-full h-full" 
-                        src="https://www.youtube.com/embed/yxAPMfGR0jE?autoplay=1" 
+                        src={url}
                         title="Massdriver Homepage Demo 2024" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin" 

@@ -1,3 +1,4 @@
+"use client";
 import Button from "./button"
 import Image from "next/image"
 import PodcastSection from "./podcastSection"
@@ -10,7 +11,6 @@ export default function TestimonialSection() {
 
 
     return (
-        <>
         <section className="flex flex-col relative w-full items-center bg-cyan-950 py-16 px-6 overflow-hidden">
             <h1 className="text-4xl text-white mb-6 text-center max-w-[76rem]">
               How AMD Global Telemedicine Reduced Software Release Effort by 89%
@@ -72,10 +72,6 @@ export default function TestimonialSection() {
             <img src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64a77ff7fbb9f0a557f02e26_circle-accent.svg"
                 className="absolute bottom-[-8rem] right-[-9rem]"/>
         </section>
-        <div className="flex flex-col items-center w-full bg-cyan-800 p-3">
-            <p className="hover:underline cursor-pointer">Need help persuading your manager?</p>
-        </div>
-        </>
       )
 }
 

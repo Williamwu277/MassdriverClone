@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import NavSection from "./ui/navSection"
 import Banner from "./ui/banner"
+import FooterSection from "./ui/footerSection"
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Banner/>
         <NavSection/>
         {children}
+        <FooterSection/>
       </body>
     </html>
   );

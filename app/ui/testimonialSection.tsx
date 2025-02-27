@@ -86,7 +86,7 @@ export default function TestimonialSection() {
                     loop={true}
                     autoHeight={true}
                     breakpoints={{
-                        560: {
+                        500: {
                             slidesPerView: 1,
                             spaceBetween: 20,
                         },

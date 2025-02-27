@@ -3,8 +3,8 @@ import Button from "./button"
 
 export default function NavSection(){
     return (
-        <header className="sticky top-0 z-50 w-full border-b-[1px] border-gray-300">
-            <div className="grid p-5 grid-cols-[auto_auto_auto] place-items-center w-full bg-gray-100">
+        <header className="flex items-center justify-center sticky top-0 z-50 w-full border-b-[1px] border-gray-300 bg-gray-100">
+            <div className="grid p-5 grid-cols-[auto_auto_auto] place-items-center w-full max-w-[88rem]">
                 <Link href="/" className="flex justify-start space-x-2">
                 <img src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64b77733fbfa9c69e4082105_massdriver-logomark%201.svg"/>
                 </Link>

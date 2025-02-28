@@ -15,7 +15,8 @@ const testimonials = [
       title: "Principle Software Engineer",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d39a4b61b3cfdaf779659c_AMD-logo.png",
       case: "View AMD Case Study →",
-      stats: "AMD Global Telemedicine experienced an 89% reduction in \"DevOps\" tasks and saw ROI in about 10 days."
+      stats: "AMD Global Telemedicine experienced an 89% reduction in \"DevOps\" tasks and saw ROI in about 10 days.",
+      link: "https://www.massdriver.cloud/case-studies/how-amd-global-telemedicine-reduced-software-release-effort-by-89-with-massdriver"
     },
     {
       quote: "Massdriver is a must for small teams that don’t have the resources for a dedicated DevOps team, as it significantly simplifies and improves their deployment processes. It is also a great tool for bigger teams as it follows best practices when provisioning infrastructure and modernizes processes by using Infrastructure as Code.",
@@ -23,7 +24,8 @@ const testimonials = [
       title: "Head of Engineering",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d3995730fbec7d65ac5b18_gamestake-p-500.png",
       case: "View GameStake Case Study →",
-      stats: "GameStake saved 25% on their cloud costs by adopting Massdriver."
+      stats: "GameStake saved 25% on their cloud costs by adopting Massdriver.",
+      link: "https://www.massdriver.cloud/case-studies/gamestake-achieves-zero-downtime-deployments-with-a-25-reduction-in-cloud-costs"
     },
     {
       quote: "We are partnering with innovative companies like Massdriver to help founders achieve more. As a part of Microsoft for Startups Founders Hub, startups can now receive access to Massdriver's productivity tools, designed to streamline cloud management and reduce infrastructure development time.",
@@ -31,7 +33,8 @@ const testimonials = [
       title: "Director",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d39b472184fbdd39992664_microsoft-founders-hub.png",
       case: "", 
-      stats: ""
+      stats: "",
+      link: ""
     },
     {
       quote: "Their proactive approach to user feedback, coupled with the platform's open-source nature, ensures it remains an essential tool in our DevOps arsenal.",
@@ -39,7 +42,8 @@ const testimonials = [
       title: "CTO",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d39918479620018d69aa57_vp-p-500.png",
       case: "", 
-      stats: ""
+      stats: "",
+      link: ""
     },
     {
       quote: "Massdriver is a comprehensive platform engineering solution that combines ease of use with robust functionality. Its focus on compliance, security, and cost-effectiveness makes it a valuable tool for organizations of all sizes.",
@@ -47,7 +51,8 @@ const testimonials = [
       title: "Founding Engineer",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d3989be61427c51ea48c3b_energos-p-500.png",
       case: "", 
-      stats: ""
+      stats: "",
+      link: ""
     },
     {
       quote: "As an engineer who no longer has their own DevOps team, Massdriver is a great abstraction for a team who wants to move away from their PaaS, but doesn’t want to go completely to the IaaS side.",
@@ -55,7 +60,8 @@ const testimonials = [
       title: "Senior Software Engineer",
       logo: "https://www.massdriver.cloud/assets/649d16db05505718a723b2df/65d39a05e63dedb683bc5fd7_invibe-p-500.png",
       case: "", 
-      stats: ""
+      stats: "",
+      link: ""
     },
 ]
 
@@ -115,7 +121,7 @@ export default function TestimonialSection() {
                                 <p className="text-gray-800 mb-3">{testimonial.quote}</p>
                                 {/* explore more */}
                                 {testimonial.case !== "" && 
-                                    <p className="text-sky-600 cursor-pointer">{testimonial.case}</p>
+                                    <a href={testimonial.link} className="text-sky-600 cursor-pointer">{testimonial.case}</a>
                                 }
                                 {/* author, title and company */}
                                 <div className="absolute bottom-8 left-6 right-6 flex items-center justify-between">

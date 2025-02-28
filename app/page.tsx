@@ -1,5 +1,3 @@
-import Image from "next/image"
-import Link from "next/link"
 import HeroSection from "./ui/heroSection"
 import InstructionSection from "./ui/instructionSection"
 import ExploreSection from "./ui/exploreSection"

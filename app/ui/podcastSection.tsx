@@ -11,6 +11,17 @@ const podcastPlatforms = [
     "https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/66577e52d66054674c47c0b7_664c16e1a0e4dc6f751af654_664c0fff746f5f1799c10fa3_audible-p-500.jpg"
 ]
 
+const podcastLinks = [
+    "https://www.youtube.com/watch?v=OKWduGVJegs&list=PLYtbHcshkYWZH8yXhSmKv1LUfFjlHMG0w",
+    "https://www.iheart.com/podcast/269-platform-engineering-podca-148417982/",
+    "https://open.spotify.com/show/5VDRu9cn4flUpCaVWOZalW",
+    "https://podcasts.apple.com/us/podcast/platform-engineering-podcast/id1729594542",
+    "https://music.amazon.com/podcasts/8ccabf03-b056-4c7f-9912-8033a7de2cde/platform-engineering-podcast",
+    "https://pca.st/6o9rqdvp",
+    "https://www.listennotes.com/podcasts/platform-engineering-podcast-cory-odaniel-nxZlHABsK8R/",
+    "https://www.audible.com/podcast/Platform-Engineering-Podcast/B0CTR9XR1Y"
+]
+
 export default function PodcastSection() {
     /* Podcast links */
 
@@ -28,14 +39,15 @@ export default function PodcastSection() {
             {/* logos */}
             <div className="grid grid-cols-4 sm:flex sm:flex-wrap lg:grid-cols-8 justify-center gap-6">
                 {podcastPlatforms.map((platform, index) => (
-                    <Image
-                        className="h-12 w-auto object-contain cursor-pointer transition-transform duration-300 hover:scale-110"
-                        src={platform}
-                        alt={index + " icon"}
-                        key={index}
-                        width={200}
-                        height={200}
-                    />
+                    <a href={podcastLinks[index]} key={index}>
+                        <Image
+                            className="h-12 w-auto object-contain cursor-pointer transition-transform duration-300 hover:scale-110"
+                            src={platform}
+                            alt={index + " icon"}
+                            width={200}
+                            height={200}
+                        />
+                    </a>
                 ))}
             </div>
         </div>

@@ -33,7 +33,7 @@ export default function TestimonialSection() {
                         />
                     </div>
                     <p className="text-md text-gray-200">
-                        Massdriver's platform has revolutionized our approach to infrastructure, saving us 89% of the time
+                        Massdriver&apos;s platform has revolutionized our approach to infrastructure, saving us 89% of the time
                         spent managing infrastructure. Our operation could upscale by an order of magnitude, if not two, and we
                         would not be in crisis mode to hire somebody to manage infrastructure.
                     </p>
@@ -42,14 +42,14 @@ export default function TestimonialSection() {
                 <div className="flex flex-col">
                     <p className="text-gray-400 text-md mb-4">
                         Explore how AMD Global Telemedicine revolutionized their software deployment process, cutting down
-                        release effort by 89% with Massdriver's cloud solutions. This case study is a must-read for those aiming
+                        release effort by 89% with Massdriver&apos;s cloud solutions. This case study is a must-read for those aiming
                         to scale efficiently and enhance team productivity through innovative cloud technology. Download now for
                         key insights.
                     </p>
                     <ul className="space-y-4 text-gray-200 mb-4">
                         <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-gray-200 mt-2" />
-                            <span>Reduced software release effort by 89% with Massdriver's cloud solutions.</span>
+                            <span>Reduced software release effort by 89% with Massdriver&apos;s cloud solutions.</span>
                         </li>
                         <li className="flex items-start gap-2">
                             <div className="w-1.5 h-1.5 rounded-full bg-gray-200 mt-2" />
@@ -69,7 +69,7 @@ export default function TestimonialSection() {
             {/* we know the cloud section */}
             <CloudSection/>
             {/* exploring buttons */}
-            <h1 className="text-white text-center mt-12 text-xl md:text-4xl max-w-2xl">We're confident Massdriver will transform how your team operates. Are you ready to simplify?</h1>
+            <h1 className="text-white text-center mt-12 text-xl md:text-4xl max-w-2xl">We&apos;re confident Massdriver will transform how your team operates. Are you ready to simplify?</h1>
             <div className="grid grid-cols-1 place-items-center md:place-items-start md:grid-cols-3 w-fit mt-8 gap-y-3">
                 <Button content="Book a Demo →" url="https://www.massdriver.cloud/demo"/>
                 <a href="https://app.massdriver.cloud/register" className="z-10 rounded-lg border-[1px] border-white px-6 py-3 text-white font-bold w-fit">Try Free Now →</a>

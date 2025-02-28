@@ -31,9 +31,9 @@ export default function CloudSection() {
                 <div className="bg-gray-100 rounded-lg p-6 relative">
 
                     <p className="text-sm md:text-lg text-gray-800 mb-6">
-                        "We are partnering with innovative companies like Massdriver to help founders achieve more. As a part of
-                        Microsoft for Startups Founders Hub, startups can now receive access to Massdriver's productivity tools,
-                        designed to streamline cloud management and reduce infrastructure development time."
+                        &quot;We are partnering with innovative companies like Massdriver to help founders achieve more. As a part of
+                        Microsoft for Startups Founders Hub, startups can now receive access to Massdriver&apos;s productivity tools,
+                        designed to streamline cloud management and reduce infrastructure development time.&quot;
                     </p>
 
                     <span className="text-xs font-bold text-gray-700">Kirk Safford</span>
@@ -49,7 +49,7 @@ export default function CloudSection() {
             {/* breakpoint */}
             <div className="border-[1px] border-gray-100 border-dashed w-full mt-24 mb-8" />
             <p className="text-sm md:text-xl text-center max-w-3xl text-gray-400 w-3/4">
-                Built by a team of world-class cloud certified experts. Massdriver has passed rigorous CIS benchmarks for your favorite cloud's partnership network.
+                Built by a team of world-class cloud certified experts. Massdriver has passed rigorous CIS benchmarks for your favorite cloud&apos;s partnership network.
             </p>
             {/* logos */}
             <div className="grid grid-cols-[auto_auto_auto] gap-x-4 md:gap-x-8 w-fit place-items-center mt-6">

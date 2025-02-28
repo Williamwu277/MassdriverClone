@@ -18,7 +18,7 @@ export default function HeroSection(){
                 {"Our platform lets "}
                 {/* help pop up */}
                 <span className="underline relative group inline-block cursor-help">
-                    "ops"
+                    &quot;ops&quot;
                     <span className="absolute pointer-events-none w-max bottom-full mb-2 left-1/2 -translate-x-1/2 px-2 py-2 text-sm md:text-lg text-white bg-black rounded opacity-0 group-hover:opacity-100 transition-opacity">
                         Ops teams, DevOps teams, platform 
                         <br/>

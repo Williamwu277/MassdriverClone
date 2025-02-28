@@ -47,7 +47,7 @@ export default function TestimonialSection() {
     /* handle video pausing and starting */
     function handlePause(index: number){
         if(videoRefs[index].current == null) return;
-        let newState = [...videoState];
+        const newState = [...videoState];
         newState[index] = !newState[index];
         setVideoState(newState);
         if(newState[index]){

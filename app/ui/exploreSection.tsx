@@ -46,7 +46,7 @@ export default function ExploreSection(){
             <img className="absolute top-[-5rem] right-[-3rem]" src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64a7ac1334017c29afcc086a_shape.svg"></img>
             {/* title */}
             <h1 className="text-black text-center w-3/4 text-2xl md:text-4xl mb-8">
-                See What's Possible with Massdriver's IaC-Powered Platform
+                See What&apos;s Possible with Massdriver&apos;s IaC-Powered Platform
             </h1>
             {/* video */}
             <VideoPopup img="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/656ff2a2c5caa0c1115f8a97_observe.png" url="https://www.youtube.com/embed/yxAPMfGR0jE?autoplay=1"/>

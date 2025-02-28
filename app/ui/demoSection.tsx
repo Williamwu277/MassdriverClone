@@ -1,4 +1,3 @@
-import Image from "next/image"
 import VideoPopup from "./videoPopup"
 import Button from "./button"
 

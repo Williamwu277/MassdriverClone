@@ -24,7 +24,7 @@ export default function QuestionsSection() {
                 <div className={`absolute flex flex-row justify-between items-center w-full text-white pl-6 pr-8 pt-3 pb-5 gap-x-3 transition-opacity duration-1000 ${toggleSlider?"opacity-100":"opacity-0 invisible"}`}>
                     <div>
                         <p className="text-xl mb-2">Cut the red tape.</p>
-                        <p className="text-sm">Download the Massdriver pitch deck to convince them it's time for a true developer self-service.</p>
+                        <p className="text-sm">Download the Massdriver pitch deck to convince them it&apos;s time for a true developer self-service.</p>
                     </div>
                     <a href="https://www.massdriver.cloud/assets/massdriver-pitch-deck-2025-01.pdf">
                         <div className="flex justify-center items-center hover:bg-cyan-600 rounded-lg cursor-pointer">

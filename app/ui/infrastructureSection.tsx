@@ -77,7 +77,7 @@ export default function TestimonialSection() {
                             >
                                 {/* video */}
                                 <video 
-                                    className="order-2 md:order-1"
+                                    className="order-2 md:order-1 pointer-events-none"
                                     ref={videoRefs[index]}
                                     width="800"
                                     height="450"

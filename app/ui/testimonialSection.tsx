@@ -154,8 +154,8 @@ export default function TestimonialSection() {
                             key={index}
                             src={link}
                             alt={`${index} logo`}
-                            width={100}
-                            height={100}
+                            width={300}
+                            height={300}
                             className="h-8 w-auto object-contain"
                         />
                     ))

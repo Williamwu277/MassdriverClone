@@ -83,6 +83,9 @@ export default function TestimonialSection() {
                                     height="450"
                                     autoPlay
                                     loop
+                                    muted
+                                    playsInline
+                                    controls={false}
                                 >
                                     <source src={section.video} type="video/mp4" />
                                     Your browser does not support the video tag.

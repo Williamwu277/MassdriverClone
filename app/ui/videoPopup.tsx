@@ -19,16 +19,16 @@ export default function VideoPopup({ img, url } : { img: string, url: string }){
                 onClick={() => setIsOpen(true)}
             />
             {/* Play button overlay */}
-            <img onClick={() => setIsOpen(true)} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:opacity-75" src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64acf11aea05539a1f8e2e4a_YouTube_play_button.svg"/>
+            <img onClick={() => setIsOpen(true)} className="absolute w-[3rem] md:w-[6rem] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer hover:opacity-75" src="https://www.massdriver.cloud/assets/645c0dea42f678e1f8b77774/64acf11aea05539a1f8e2e4a_YouTube_play_button.svg"/>
         </div>    
 
         {/* Video Modal */}
         {isOpen && (
             <div 
-                className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-85 z-50"
+                className="fixed inset-0 flex w-screen h-screen bg-black bg-opacity-85 z-50"
                 onClick={() => setIsOpen(false)} // Close when clicking outside
             >
-                <div className="flex justify-center items-center w-full max-w-[940px] aspect-video">
+                <div className="absolute flex left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[940px] aspect-video">
                     <iframe 
                         className="w-full h-full" 
                         src={url}
@@ -38,7 +38,7 @@ export default function VideoPopup({ img, url } : { img: string, url: string }){
                         allowFullScreen
                     />
                 </div>
-                <button className="absolute top-2 right-2 text-2xl" onClick={() => setIsOpen(false)}>
+                <button className="absolute top-4 right-8 text-2xl text-white" onClick={() => setIsOpen(false)}>
                 ✖
                 </button>
             </div>

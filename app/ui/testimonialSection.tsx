@@ -73,43 +73,51 @@ const featuredIn = [
 ]
 
 export default function TestimonialSection() {
+    // swiping section for testimonials
 
     return (
         <section className="flex flex-col items-center bg-slate-800 py-24 gap-y-14 overflow-hidden h-auto">
-            <h1 className="text-4xl font-bold text-white">Loved by DevOps and Software Engineers</h1>
-            <div className="container relative h-auto max-w-[78rem] px-3">
+            {/* title */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl text-white w-3/4 text-center">Loved by DevOps and Software Engineers</h1>
+            <div className="container relative h-auto max-w-[78rem] px-5">
+                {/* testimonial swiper */}
                 <Swiper
                     modules={[Navigation]}
                     spaceBetween={20}
-                    slidesPerView={3}
+                    slidesPerView={1}
                     navigation
                     loop={true}
-                    autoHeight={true}
+                    autoHeight={false}
                     breakpoints={{
-                        500: {
+                        590: {
                             slidesPerView: 1,
                             spaceBetween: 20,
                         },
-                        780: {
+                        750: {
                             slidesPerView: 2,
                             spaceBetween: 20,
                         },
-                        1140: {
+                        1060: {
                             slidesPerView: 3,
                             spaceBetween: 20,
                         },
                     }}
                     >
+                    {/* swiping components */}
                     {testimonials.map((testimonial, index) => (
-                        <SwiperSlide key={index} className="flex flex-col bg-white rounded-lg h-full min-h-[32rem]">
+                        <SwiperSlide key={index} className="flex flex-col bg-white rounded-lg h-full min-h-[30rem] sm:min-h-[26rem] md:min-h-[36rem] text-base md:text-lg">
+                            {/* black extra stat bar at top of component */}
                             {testimonial.stats!=="" &&
-                                <p className="text-white bg-slate-900 py-4 px-6 rounded-t-md">{testimonial.stats}</p>
+                                <p className="text-sm text-white bg-slate-900 py-4 px-6 rounded-t-md">{testimonial.stats}</p>
                             }
+                            {/* quote */}
                             <div className="flex flex-col py-4 px-6 h-fitrelative">
-                                <p className="text-lg text-gray-800 mb-3">{testimonial.quote}</p>
+                                <p className="text-gray-800 mb-3">{testimonial.quote}</p>
+                                {/* explore more */}
                                 {testimonial.case !== "" && 
                                     <p className="text-sky-600 cursor-pointer">{testimonial.case}</p>
                                 }
+                                {/* author, title and company */}
                                 <div className="absolute bottom-8 left-6 right-6 flex items-center justify-between">
                                     <div>
                                         <p className="font-medium text-gray-900">{testimonial.author}</p>
@@ -127,12 +135,13 @@ export default function TestimonialSection() {
                         </SwiperSlide>
                     ))}
                 </Swiper>
+            {/* feature logos */}
             </div>
-            <div className="flex flex-row justify-between w-11/12 max-w-5xl mt-3">
+            <div className="flex flex-col sm:flex-row items-center justify-between w-11/12 max-w-5xl mt-3 gap-y-3 sm:gap-y-0">
                 <p className="text-3xl text-white">Featured In</p>
-                <Button content="Read News →"/>
+                <Button content="Read News →" url="https://www.massdriver.cloud/news"/>
             </div>
-            <div className="grid grid-cols-5 gap-y-12 gap-x-5 place-items-center w-11/12 max-w-5xl">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-y-12 gap-x-5 place-items-center w-11/12 max-w-5xl">
                 {
                     featuredIn.map((link, index) => (
                         <Image

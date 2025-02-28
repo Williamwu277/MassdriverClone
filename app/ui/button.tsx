@@ -1,7 +1,7 @@
 
 
-export default function Button({ content } : { content: string }){
+export default function Button({ content, url } : { content: string, url: string }){
     return (
-        <button className="rounded-lg px-6 py-3 bg-blue-800 text-white font-bold w-fit">{content}</button>
+        <a href={url} className="rounded-md px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-400 text-white font-medium w-fit">{content}</a>
     )
 }

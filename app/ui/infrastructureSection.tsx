@@ -44,6 +44,7 @@ export default function TestimonialSection() {
         useRef<HTMLVideoElement>(null)
     ]
 
+    /* handle video pausing and starting */
     function handlePause(index: number){
         if(videoRefs[index].current == null) return;
         let newState = [...videoState];
@@ -57,22 +58,26 @@ export default function TestimonialSection() {
     }
 
 
-
     return (
         <section className="flex flex-col items-center bg-slate-800 py-16 px-8 text-white">
-            <h1 className="text-4xl font-bold text-center">Infrastructure at the Speed of Thought</h1>
-            <p className="mt-4 max-w-[30rem] text-center text-lg">
+            {/* heading */}
+            <h1 className="text-4xl text-center">Infrastructure at the Speed of Thought</h1>
+            <p className="mt-4 max-w-[30rem] text-center text-sm md:text-lg">
                 Enable developer self-service without risking compliance, security, cost, or reliability.
             </p>
             {
+                /* sections start */
                 sections.map((section, index) => {
+                    {/* odd, reversed */}
                     if(index % 2 === 1){
                         return (
                             <div 
                                 key={index}
-                                className="grid relative place-items-center grid-cols-[3fr_2fr] w-full h-full mt-12 max-w-[76rem] gap-x-8"
+                                className="grid grid-flow-dense relative place-items-center grid-cols-1 md:grid-cols-[3fr_2fr] w-full h-full mt-12 max-w-[76rem] gap-x-8"
                             >
+                                {/* video */}
                                 <video 
+                                    className="order-2 md:order-1"
                                     ref={videoRefs[index]}
                                     width="800"
                                     height="450"
@@ -83,7 +88,7 @@ export default function TestimonialSection() {
                                     Your browser does not support the video tag.
                                 </video>
                                 <img 
-                                    className="absolute bottom-4 left-4 cursor-pointer" 
+                                    className="absolute bottom-4 right-4 md:left-4 cursor-pointer" 
                                     src={
                                         videoState[index]?
                                         "https://www.massdriver.cloud/assets/6022af993a6b2191db3ed10c/628299f8aa233b83918e24fd_Pause.svg":
@@ -91,25 +96,28 @@ export default function TestimonialSection() {
                                     }
                                     onClick={() => handlePause(index)}
                                 />
-                                <div className="flex flex-col gap-y-6 mt-3 mb-6">
-                                    <p className="text-4xl">{section.title}</p>
-                                    <p className="text-sm">{section.desc[0]}</p>
-                                    <p className="text-sm">{section.desc[1]}</p>
-                                    <p className="text-sm">{section.desc[2]}</p>
+                                {/* descriptions */}
+                                <div className="flex flex-col gap-y-6 mt-3 mb-6 order-1 md:order-2">
+                                    <p className="text-2xl md:text-3xl lg:text-4xl">{section.title}</p>
+                                    <p className="text-sm text-gray-300">{section.desc[0]}</p>
+                                    <p className="text-sm text-gray-300">{section.desc[1]}</p>
+                                    <p className="text-sm text-gray-300">{section.desc[2]}</p>
                                 </div>
                             </div>
                         )
                     }
+                    {/* even, normal ordering */}
                     return (
                         <div 
                             key={index}
-                            className="grid relative place-items-center grid-cols-[2fr_3fr] w-full h-full mt-12 max-w-[76rem] gap-x-8"
+                            className="grid relative place-items-center grid-cols-1 md:grid-cols-[2fr_3fr] w-full h-full mt-12 max-w-[76rem] gap-x-8"
                         >
+                            {/* video */}
                             <div className="flex flex-col gap-y-6 mt-3 mb-6">
-                                <p className="text-4xl">{section.title}</p>
-                                <p className="text-sm">{section.desc[0]}</p>
-                                <p className="text-sm">{section.desc[1]}</p>
-                                <p className="text-sm">{section.desc[2]}</p>
+                                <p className="text-2xl md:text-3xl lg:text-4xl">{section.title}</p>
+                                <p className="text-sm text-gray-300">{section.desc[0]}</p>
+                                <p className="text-sm text-gray-300">{section.desc[1]}</p>
+                                <p className="text-sm text-gray-300">{section.desc[2]}</p>
                             </div>
                             <video 
                                 ref={videoRefs[index]}
@@ -121,6 +129,7 @@ export default function TestimonialSection() {
                                 <source src={section.video} type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
+                            {/* descriptions */}
                             <img 
                                 className="absolute bottom-4 right-4 cursor-pointer" 
                                 src={
@@ -134,8 +143,9 @@ export default function TestimonialSection() {
                     )
                 })
             }
+            {/* demo */}
             <span className="m-6"/>
-            <Button content="See a demo →"/>
+            <Button content="See a demo →" url="https://www.massdriver.cloud/demo"/>
         </section>
     ) 
 }

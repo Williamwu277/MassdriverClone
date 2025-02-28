@@ -12,16 +12,21 @@ const podcastPlatforms = [
 ]
 
 export default function PodcastSection() {
+    /* Podcast links */
+
+
     return (
-        <div className="flex flex-col items-center rounded-lg bg-white p-12 w-11/12 max-w-3xl">
-            <h2 className="text-black text-3xl tracking-tight uppercase">Platform Engineering</h2>
-            <p className="text-black text-sm uppercase tracking-widest mb-4">Podcast</p>
-            <p className="text-gray-600 max-w-xl mx-auto text-center mb-6">
+        <div className="flex flex-col items-center rounded-lg bg-white p-8 md:p-12 w-full max-w-3xl">
+            {/* links */}
+            <h2 className="text-black text-xl md:text-3xl tracking-tight uppercase">Platform Engineering</h2>
+            <p className="text-black text-xs md:text-sm uppercase tracking-widest mb-4">Podcast</p>
+            <p className="text-gray-600 font-light max-w-xl mx-auto text-center mb-10 text-sm md:text-base">
                 This podcast caters to professionals and enthusiasts passionate about the intricacies of platform
                 architecture, cloud operations, and scaling DevOps practices.
             </p>
-            <p className="text-sm text-black uppercase mb-3">Listen to the Podcast</p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <p className="text-sm text-black uppercase mb-4">Listen to the Podcast</p>
+            {/* logos */}
+            <div className="grid grid-cols-4 sm:flex sm:flex-wrap lg:grid-cols-8 justify-center gap-6">
                 {podcastPlatforms.map((platform, index) => (
                     <Image
                         className="h-12 w-auto object-contain cursor-pointer transition-transform duration-300 hover:scale-110"

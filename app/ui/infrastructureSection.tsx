@@ -123,11 +123,15 @@ export default function TestimonialSection() {
                                 <p className="text-sm text-gray-300">{section.desc[2]}</p>
                             </div>
                             <video 
+                                className="order-2 md:order-1 pointer-events-none"
                                 ref={videoRefs[index]}
                                 width="800"
                                 height="450"
                                 autoPlay
                                 loop
+                                muted
+                                playsInline
+                                controls={false}
                             >
                                 <source src={section.video} type="video/mp4" />
                                 Your browser does not support the video tag.

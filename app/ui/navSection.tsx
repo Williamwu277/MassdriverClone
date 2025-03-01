@@ -65,7 +65,7 @@ export default function NavSection(){
                             <a
                                 key={item.title}
                                 href={item.link}
-                                className={`px-4 py-2 font-medium text-xs xl:text-sm cursor-pointer transition-colors duration-250 hover:${item.link===""?"text-gray-500":"text-blue-500"} text-black`}
+                                className={`px-4 py-2 font-medium text-xs xl:text-sm cursor-pointer transition-colors duration-250 ${(item.link===''?"hover:text-gray-500":"hover:text-blue-500")} text-black`}
                             >
                                 {item.title} {item.link===""&&"▼"}
                             </a>
@@ -95,9 +95,9 @@ export default function NavSection(){
                     {dropdownSections.map((item) => (
                         <a href={item.link} key={item.title}>
                             <div
-                                className={`flex flex-row w-full justify-between px-1 py-2 border-b-[1px] border-gray-300 transition-colors duration-250 text-black hover:${item.link===""?"text-gray-500":"text-blue-500"}`}
+                                className={`flex flex-row w-full justify-between px-1 py-2 border-b-[1px] border-gray-300 transition-colors duration-250 text-black ${item.link===""?"hover:text-gray-200":"hover:text-blue-500"}`}
                             >
-                                <p className="px-4 py-2 font-medium text-sm xl:text-sm text-muted-foreground hover:text-foreground">{item.title}</p>
+                                <p className="px-4 py-2 font-medium text-sm xl:text-sm">{item.title}</p>
                                 { (item.link === "") &&
                                     <p className="pr-2">▼</p>
                                 }
